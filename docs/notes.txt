@@ -1,0 +1,17 @@
+
+
+Use a dynamic, extendable hash function to identify which DB server, from a pool of servers, to put a document into.
+
+1. We need near constant O(1) time look-up of documents. Given a document ID we should be able to retrieve it directly from the DB pool.
+2. Pool of DB servers must be extensible with minimal cost for data migration when new servers are added to the pool.
+    2.1 Rehashing must be incremental
+
+
+
+Resources
+---------
+*   http://en.wikipedia.org/wiki/Hash_function
+*   http://en.wikipedia.org/wiki/Extendible_hashing
+*   http://en.wikipedia.org/wiki/Bloom_filter
+
+
